@@ -79,12 +79,20 @@ CYBER-AI-ENHANCED-INTRUSION-DETECTION/
 
 ### 📦 Using Conda (Recommended)
 
-bash
+```bash
+# Create and activate the Conda environment
 conda create -n cyber_ids python=3.10
 conda activate cyber_ids
+
+# Clone the repository
 git clone https://github.com/adityabhole165/Cyber-Security-Ai-Enhanced-Intrusion-Detection-System.git
+
+# Navigate to the project directory
 cd CYBER_PROJECT
+
+# Install required Python packages
 pip install -r requirment.txt
+```
 
 
 ### 🐍 Using Python venv
