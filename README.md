@@ -18,7 +18,7 @@ By combining advanced Random Forest Classification with cybersecurity domain kno
   <img src="https://drive.google.com/uc?export=view&id=1BlrsOpwgJRabkZNjMh3a4dyraZ_v1YKy" width="800" alt="">
 </p>
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1dXUPq0OiRTV-h09iJhoJWNhBYuqw6VjY" width="800" alt="">
+  <img src="https://drive.google.com/uc?export=view&id=1HX5PlGd2vEjfFBzlethO-5XPtQilBwXE" width="800" alt="">
 </p>
 <p align="center">
   <img src="https://drive.google.com/uc?export=view&id=1dXUPq0OiRTV-h09iJhoJWNhBYuqw6VjY" width="800" alt="">
