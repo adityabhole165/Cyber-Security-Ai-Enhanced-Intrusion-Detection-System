@@ -54,9 +54,11 @@ random_forest_model_4_features.joblib
 
 ---
 
-## 🗂 Project Directory Structure
 
 
+
+```text
+🗂 Project Directory Structure
 
 CYBER-AI-ENHANCED-INTRUSION-DETECTION/
 ├── CYBER_PROJECT/
@@ -68,7 +70,7 @@ CYBER-AI-ENHANCED-INTRUSION-DETECTION/
 ├── requirment.txt                                 # Python dependencies
 ├── Untitled.ipynb                                 # Data analysis / experimentation notebook
 └── README.md                                      # Project documentation
-
+```
 
 
 ---
