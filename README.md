@@ -11,7 +11,7 @@ By combining advanced Random Forest Classification with cybersecurity domain kno
 
 ---
 
-## 🖼 Demo Screenshots
+## 🖼 Output Screenshots
 
 ### 🔹 Output Result  
 <p align="center">
