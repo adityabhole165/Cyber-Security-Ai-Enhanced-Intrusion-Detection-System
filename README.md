@@ -57,16 +57,18 @@ random_forest_model_4_features.joblib
 ## 🗂 Project Directory Structure
 
 
+
 CYBER-AI-ENHANCED-INTRUSION-DETECTION/
 ├── CYBER_PROJECT/
-│ ├── templates/
-│ │ └── index.html                             # Web interface template
-│ └── app.py                                   # Flask application entry point
-├── random_forest_model_4_features.joblib      # Trained ML model
-├── web_attacks_balanced.csv                   # Preprocessed dataset
-├── requirment.txt                             # Python dependencies
-├── Untitled.ipynb                             # Data analysis / experimentation notebook
-└── README.md                                  # Project documentation
+│   ├── templates/
+│   │   └── index.html                             # Web interface template
+│   └── app.py                                     # Flask application entry point
+├── random_forest_model_4_features.joblib          # Trained ML model
+├── web_attacks_balanced.csv                       # Preprocessed dataset
+├── requirment.txt                                 # Python dependencies
+├── Untitled.ipynb                                 # Data analysis / experimentation notebook
+└── README.md                                      # Project documentation
+
 
 
 ---
