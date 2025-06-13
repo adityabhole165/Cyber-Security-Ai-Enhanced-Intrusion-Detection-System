@@ -1,89 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Random Forest Predictor</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-image: url('https://assets.bizclikmedia.net/1336/8dc2872cdb3d622f052fee37f0a9b7de:923ff94b35be99a0d373c50211dddcd3/gettyimages-1310426274-0-jpg.webp'); /* Replace with your preferred image */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-        }
-        h2 {
-            color: #333;
-            text-align: center;
-        }
-        form {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            width: 320px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-        input[type=number], input[type=text] {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        input[type=submit] {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        input[type=submit]:hover {
-            background-color: #0056b3;
-        }
-        .prediction {
-            margin-top: 20px;
-            background: rgba(255,255,255,0.9);
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <h2>Web Attack Prediction</h2>
-        <form method="POST" action="/predict">
-            <label for="flow_duration">Flow Duration:</label>
-            <input type="number" step="any" name="flow_duration" required><br>
-            
-            <label for="total_fwd_packets">Total Fwd Packets:</label>
-            <input type="number" step="any" name="total_fwd_packets" required><br>
-            
-            <label for="total_backward_packets">Total Backward Packets:</label>
-            <input type="number" step="any" name="total_backward_packets" required><br>
-            
-            <label for="total_length_fwd_packets">Total Length of Fwd Packets:</label>
-            <input type="number" step="any" name="total_length_fwd_packets" required><br>
-            
-            <input type="submit" value="Predict">
-        </form>
-
-        {% if prediction %}
-            <div class="prediction">
-                <h3>Prediction: {{ prediction }}</h3>
-            </div>
-        {% endif %}
-    </div>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,19 +13,22 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Use min-height to ensure it covers the full viewport */
-            padding: 20px; /* Add some padding for smaller screens */
-            box-sizing: border-box; /* Include padding in the element's total width and height */
+            align-items: center; /* Changed back to center */
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
         }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 35px;
             border-radius: 12px;
             width: 100%;
-            max-width: 450px; /* Max width for better control on larger screens */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
+            /* Removed margin-top and margin-bottom */
         }
         h2 {
             color: #2c3e50; /* Darker, more professional color */
@@ -174,16 +91,16 @@
         <h2>Web Attack Prediction</h2>
         <form method="POST" action="/predict">
             <label for="flow_duration">Flow Duration:</label>
-            <input type="number" step="any" name="flow_duration" required>
+            <input type="number" step="any" name="flow_duration" required value="{{ request.form.flow_duration if request.form.flow_duration else '' }}">
             
             <label for="total_fwd_packets">Total Forward Packets:</label>
-            <input type="number" step="any" name="total_fwd_packets" required>
+            <input type="number" step="any" name="total_fwd_packets" required value="{{ request.form.total_fwd_packets if request.form.total_fwd_packets else '' }}">
             
             <label for="total_backward_packets">Total Backward Packets:</label>
-            <input type="number" step="any" name="total_backward_packets" required>
+            <input type="number" step="any" name="total_backward_packets" required value="{{ request.form.total_backward_packets if request.form.total_backward_packets else '' }}">
             
             <label for="total_length_fwd_packets">Total Length of Forward Packets:</label>
-            <input type="number" step="any" name="total_length_fwd_packets" required>
+            <input type="number" step="any" name="total_length_fwd_packets" required value="{{ request.form.total_length_fwd_packets if request.form.total_length_fwd_packets else '' }}">
             
             <input type="submit" value="Predict">
         </form>
